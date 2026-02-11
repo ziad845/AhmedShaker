@@ -1,0 +1,123 @@
+/* ========================
+   MAIN LAYOUT
+=========================== */
+
+main.flex {
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+
+/* ===============================
+   RIGHT SECTION ==> PROJECT GRID
+================================== */
+
+main section.right-section.flex {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+/* ===============================
+   CARD STYLE
+================================== */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #1e1f26;
+  border: 1px solid rgba(93, 188, 252, 0.25);
+  transition: 0.4s ease;
+  min-height: 420px;
+}
+
+/* Hover */
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(93, 188, 252, 0.25);
+  border: 1px solid var(--blue);
+}
+
+/* ===============================
+   IMAGE STYLE
+================================== */
+
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ===============================
+   TEXT CONTENT
+================================== */
+
+.card .box {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.card .box .title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.7rem;
+}
+
+.card .box .sub-title {
+  font-size: 0.9rem;
+  color: #cfcfcf;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.card .box .icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card .icon-github {
+  font-size: 1.2rem;
+  color: #cfcfcf;
+  transition: 0.3s ease;
+}
+
+.card .icon-github:hover {
+  transform: scale(1.2);
+  color: var(--icon-hover);
+  cursor: pointer;
+}
+
+.card a.link {
+  font-size: 0.9rem;
+  color: var(--blue);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: 0.3s ease;
+}
+
+.card a.link:hover {
+  transform: translateX(5px);
+}
+
+/* ===============================
+   RESPONSIVE
+================================== */
+
+@media (max-width: 900px) {
+  main section.right-section.flex {
+    grid-template-columns: 1fr;
+  }
+
+  .card img {
+    height: 200px;
+  }
+}
