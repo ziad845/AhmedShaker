@@ -1,0 +1,109 @@
+.services-page {
+  padding: 4rem 2rem;
+  background: var(--secondary);
+}
+
+/* Header */
+
+.services-header {
+  text-align: left;
+  margin-bottom: 3rem;
+}
+
+.services-subtitle {
+  color: #8b5cf6;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+}
+
+.services-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--title);
+}
+
+/* Container */
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+
+/* Card */
+
+.service-card {
+  padding: 2rem;
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.03);
+
+  border: 1px solid rgba(255, 255, 255, 0.05);
+
+  transition: 0.3s;
+
+  backdrop-filter: blur(10px);
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+
+  border: 1px solid #8b5cf6;
+
+  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.2);
+}
+
+/* Icon */
+
+.service-icon {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #8b5cf6;
+
+  color: white;
+
+  font-size: 20px;
+
+  margin-bottom: 1rem;
+}
+
+/* Title */
+
+.service-title {
+  font-size: 1.2rem;
+
+  margin-bottom: 0.7rem;
+
+  color: var(--title);
+}
+
+/* Description */
+
+.service-description {
+  font-size: 0.9rem;
+
+  color: var(--subtitle);
+
+  line-height: 1.6;
+}
+
+/* Responsive */
+
+@media (min-width: 768px) {
+  .services-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .services-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
